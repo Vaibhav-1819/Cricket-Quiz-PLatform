@@ -1,0 +1,140 @@
+[
+  {
+    "question": "Who won the IPL 2023?",
+    "options": ["CSK", "MI", "RCB", "GT"],
+    "answer": "CSK",
+    "category": "IPL"
+  },
+  {
+    "question": "Who is known as 'Captain Cool'?",
+    "options": ["Virat Kohli", "Rohit Sharma", "MS Dhoni", "Hardik Pandya"],
+    "answer": "MS Dhoni",
+    "category": "IPL"
+  },
+  {
+    "question": "Which team has won the most IPL titles?",
+    "options": ["MI", "CSK", "RCB", "KKR"],
+    "answer": "MI",
+    "category": "IPL"
+  },
+  {
+    "question": "Who holds the record for the highest individual score in Test cricket?",
+    "options": ["Brian Lara", "Don Bradman", "Sachin Tendulkar", "Kumar Sangakkara"],
+    "answer": "Brian Lara",
+    "category": "Cricket History"
+  },
+  {
+    "question": "Which country won the inaugural Cricket World Cup in 1975?",
+    "options": ["Australia", "England", "West Indies", "India"],
+    "answer": "West Indies",
+    "category": "Cricket History"
+  },
+  {
+    "question": "Who is the leading wicket-taker in Test cricket history?",
+    "options": ["Shane Warne", "Anil Kumble", "Muttiah Muralitharan", "James Anderson"],
+    "answer": "Muttiah Muralitharan",
+    "category": "Cricket Records"
+  },
+  {
+    "question": "What is the term for a batsman being out without scoring any runs?",
+    "options": ["Duck", "Maiden", "Century", "Hat-trick"],
+    "answer": "Duck",
+    "category": "Cricket Terminology"
+  },
+  {
+    "question": "Which Indian cricketer is known as 'The Wall'?",
+    "options": ["Sourav Ganguly", "Rahul Dravid", "VVS Laxman", "Virender Sehwag"],
+    "answer": "Rahul Dravid",
+    "category": "Indian Cricket"
+  },
+  {
+    "question": "How many balls are there in a standard over in cricket?",
+    "options": ["4", "5", "6", "8"],
+    "answer": "6",
+    "category": "Cricket Rules"
+  },
+  {
+    "question": "Which fast bowler is nicknamed 'Rawalpindi Express'?",
+    "options": ["Brett Lee", "Shoaib Akhtar", "Dale Steyn", "Mitchell Starc"],
+    "answer": "Shoaib Akhtar",
+    "category": "Famous Cricketers"
+  },
+  {
+    "question": "In which country was the first ever One Day International (ODI) played?",
+    "options": ["Australia", "England", "New Zealand", "South Africa"],
+    "answer": "England",
+    "category": "Cricket History"
+  },
+  {
+    "question": "Who was the first batsman to score a double century in ODI cricket?",
+    "options": ["Sachin Tendulkar", "Virender Sehwag", "Rohit Sharma", "Chris Gayle"],
+    "answer": "Sachin Tendulkar",
+    "category": "Cricket Records"
+  },
+  {
+    "question": "What is the maximum number of overs a bowler can bowl in a T20 match?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "4",
+    "category": "Cricket Rules"
+  },
+  {
+    "question": "Which trophy is contested between England and Australia in Test cricket?",
+    "options": ["Benson & Hedges Cup", "The Ashes", "Border-Gavaskar Trophy", "Chappell-Hadlee Trophy"],
+    "answer": "The Ashes",
+    "category": "Cricket Tournaments"
+  },
+  {
+    "question": "Who is the current captain of the Indian men's cricket team in all formats (as of early 2025)?",
+    "options": ["Virat Kohli", "Jasprit Bumrah", "Rohit Sharma", "Hardik Pandya"],
+    "answer": "Rohit Sharma",
+    "category": "Indian Cricket"
+  },
+  {
+    "question": "Which player has scored the most runs in the history of the Indian Premier League (IPL)?",
+    "options": ["MS Dhoni", "Virat Kohli", "Rohit Sharma", "David Warner"],
+    "answer": "Virat Kohli",
+    "category": "IPL"
+  },
+  {
+    "question": "What is the term for a bowler taking three wickets in three consecutive deliveries?",
+    "options": ["Five-wicket haul", "Century", "Hat-trick", "Maiden over"],
+    "answer": "Hat-trick",
+    "category": "Cricket Terminology"
+  },
+  {
+    "question": "Which ground is known as the 'Home of Cricket'?",
+    "options": ["Eden Gardens", "Melbourne Cricket Ground", "Lord's", "The Oval"],
+    "answer": "Lord's",
+    "category": "Cricket Grounds"
+  },
+  {
+    "question": "Who was the first woman cricketer to score a double century in ODIs?",
+    "options": ["Mithali Raj", "Belinda Clark", "Charlotte Edwards", "Smriti Mandhana"],
+    "answer": "Belinda Clark",
+    "category": "Women's Cricket"
+  },
+  {
+    "question": "Which Pakistani cricketer is famous for his 'doosra' delivery?",
+    "options": ["Wasim Akram", "Imran Khan", "Saqlain Mushtaq", "Shoaib Akhtar"],
+    "answer": "Saqlain Mushtaq",
+    "category": "Famous Cricketers"
+  },
+  {
+    "question": "What is the length of the cricket pitch (from stump to stump) in yards?",
+    "options": ["20 yards", "22 yards", "24 yards", "26 yards"],
+    "answer": "22 yards",
+    "category": "Cricket Rules"
+  },
+  {
+    "question": "Who hit the fastest century in Test cricket history?",
+    "options": ["Brendon McCullum", "Viv Richards", "Adam Gilchrist", "Misbah-ul-Haq"],
+    "answer": "Brendon McCullum",
+    "category": "Cricket Records"
+  },
+  {
+    "question": "Which IPL team's home ground is the M. A. Chidambaram Stadium?",
+    "options": ["Royal Challengers Bangalore", "Mumbai Indians", "Chennai Super Kings", "Kolkata Knight Riders"],
+    "answer": "Chennai Super Kings",
+    "category": "IPL"
+  }
+]

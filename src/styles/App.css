@@ -1,0 +1,329 @@
+/* Global Settings & Variables */
+:root {
+    --bg-light: #f0f8ff; /* Alice Blue - very light blue for general background */
+    --text-light: #2c3e50; /* Darker blue-grey for text */
+    --card-bg-light: #ffffff; /* Pure white for cards */
+    --primary-blue-light: #007bff; /* Standard Bootstrap blue for primary actions */
+    --accent-blue-light: #4ea8de; /* Lighter, more vibrant blue for accents/hovers */
+    --shadow-light: rgba(0, 0, 0, 0.08); /* Soft shadow */
+    --border-light: #e0e0e0; /* Light grey border */
+    --gradient-btn-light: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient for buttons */
+    --selected-bg-light: #e6f2ff; /* Very light blue for selected states */
+    --selected-border-light: #007bff; /* Primary blue for selected borders */
+
+    /* Dark Theme Variables */
+    --bg-dark: #2c3e50; /* Dark blue-grey for general background */
+    --text-dark: #ecf0f1; /* Light grey for text */
+    --card-bg-dark: #3b5062; /* Slightly lighter dark blue-grey for cards */
+    --primary-blue-dark: #6cb6ff; /* Lighter blue for primary actions */
+    --accent-blue-dark: #87ceeb; /* Sky blue for accents/hovers */
+    --shadow-dark: rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    --border-dark: #4f6b80; /* Darker grey border */
+    --gradient-btn-dark: linear-gradient(135deg, #4682b4, #3a689b); /* Steel blue gradient */
+    --selected-bg-dark: #4a6fa8; /* Muted blue for selected states */
+    --selected-border-dark: #6cb6ff; /* Primary blue for selected borders */
+
+    /* Transition defaults */
+    --transition-speed: 0.3s;
+    --fast-transition-speed: 0.15s; /* For snappier interactions */
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', sans-serif; /* Modern sans-serif font */
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    line-height: 1.6;
+}
+
+/* Dark Theme Toggle */
+[data-theme='dark'] {
+    --bg-light: var(--bg-dark);
+    --text-light: var(--text-dark);
+    --card-bg-light: var(--card-bg-dark);
+    --primary-blue-light: var(--primary-blue-dark);
+    --accent-blue-light: var(--accent-blue-dark);
+    --shadow-light: var(--shadow-dark);
+    --border-light: var(--border-dark);
+    --gradient-btn-light: var(--gradient-btn-dark);
+    --selected-bg-light: var(--selected-bg-dark);
+    --selected-border-light: var(--selected-border-dark);
+}
+
+/* Base Container Styling */
+.quiz-container {
+    max-width: 960px; /* Slightly wider for more content */
+    margin: 2.5rem auto; /* More vertical margin */
+    padding: 3rem; /* More internal padding */
+    background-color: var(--card-bg-light);
+    border-radius: 16px; /* More rounded corners */
+    box-shadow: 0 10px 30px var(--shadow-light); /* Deeper, softer shadow */
+    border: 1px solid var(--border-light); /* Subtle border */
+    transition: all var(--transition-speed) ease;
+}
+
+/* Typography Enhancements */
+h1, h2, h3 {
+    color: var(--primary-blue-light);
+    margin-bottom: 1rem;
+    font-weight: 700; /* Bolder headings */
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--selected-bg-light); /* Underline effect */
+    display: inline-block; /* To make border-bottom only under text */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Centers the inline-block element */
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Category Selection Section */
+.category-select {
+    text-align: center;
+    margin-bottom: 2.5rem; /* More space below heading */
+}
+
+.category-buttons {
+    display: grid; /* Use grid for better control over button layout */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Increased gap */
+    margin-top: 2rem;
+    padding: 0 1rem; /* Little padding for grid alignment */
+}
+
+.category-btn {
+    padding: 1.2rem 1.5rem; /* Larger padding for a more substantial feel */
+    background: var(--gradient-btn-light);
+    color: white;
+    font-size: 1.1rem; /* Slightly larger font */
+    font-weight: 600; /* Semi-bold */
+    border: none;
+    border-radius: 12px; /* Nicely rounded corners */
+    cursor: pointer;
+    transition: transform var(--transition-speed) ease,
+                background var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2); /* Subtle blue shadow */
+    text-transform: uppercase; /* Modern touch */
+    letter-spacing: 0.5px;
+}
+
+.category-btn:hover {
+    transform: translateY(-5px) scale(1.02); /* Lift and slightly scale */
+    background: linear-gradient(135deg, var(--accent-blue-light), #004085); /* Change gradient on hover */
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4); /* More pronounced shadow */
+}
+
+.category-btn.selected {
+    background: var(--selected-bg-light);
+    color: var(--primary-blue-light);
+    border: 2px solid var(--selected-border-light);
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2), 0 4px 15px rgba(0, 123, 255, 0.3); /* Inner and outer shadow */
+    transform: translateY(-2px); /* Slightly lifted */
+    font-weight: 700;
+}
+
+/* Card-Like Question Box */
+.question-box {
+    background: var(--card-bg-light);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 85, 164, 0.1);
+    border: 1px solid var(--border-light);
+    margin-top: 2rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.question-box:hover {
+    box-shadow: 0 8px 25px rgba(0, 85, 164, 0.15); /* Slight lift and deeper shadow on hover */
+}
+
+.question-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* --- OPTION SELECTION BUTTONS (ENHANCED) --- */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.option-card {
+    background-color: var(--card-bg-light);
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    /* Smoother, faster transition for interactive elements */
+    transition: all var(--fast-transition-speed) ease-out;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle initial shadow */
+    position: relative;
+    overflow: hidden; /* Important for pseudo-elements if they extend */
+    isolation: isolate;
+}
+
+.option-card:hover {
+    border-color: var(--accent-blue-light); /* Highlight border with accent blue */
+    background-color: var(--selected-bg-light); /* Soft light blue background on hover */
+    transform: translateY(-5px); /* More pronounced lift */
+    box-shadow: 0 12px 25px rgba(0, 123, 255, 0.15); /* Clearer, deeper hover shadow */
+    color: var(--text-light); /* Keep text color readable */
+}
+
+.option-card.selected-option {
+    background-color: var(--primary-blue-light); /* Solid primary blue when selected */
+    color: white; /* White text on blue background */
+    border-color: var(--primary-blue-light); /* Solid blue border */
+    /* Stronger glow/shadow for selected state */
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3), /* Inner glow */
+                0 8px 25px rgba(0, 123, 255, 0.5); /* Outer shadow */
+    transform: translateY(-2px) scale(1.01); /* Subtle pop and lift */
+    font-weight: 600; /* Bold text for selected option */
+    z-index: 1; /* Bring selected option slightly forward */
+    /* Add a subtle "pressed" effect on active/click if desired */
+    animation: pulse-selected 0.3s ease-out; /* Small animation on selection */
+}
+
+/* Keyframe animation for selected option */
+@keyframes pulse-selected {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.3);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 6px rgba(0, 123, 255, 0.4);
+    }
+    100% {
+        transform: scale(1.01);
+        box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.3), 0 8px 25px rgba(0, 123, 255, 0.5);
+    }
+}
+
+
+/* Optional: Add a checkmark icon for selected options (requires HTML) */
+.option-card.selected-option::after {
+    content: '✓'; /* Unicode checkmark */
+    position: absolute;
+    top: 50%;
+    right: 1rem; /* Adjust position */
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: white; /* White checkmark */
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity var(--fast-transition-speed) ease;
+}
+
+/* Navigation Buttons (Next, Submit) */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between; /* Space out buttons */
+    margin-top: 2.5rem;
+    gap: 1rem; /* Gap between buttons */
+}
+
+.nav-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    flex-grow: 1; /* Allow buttons to grow and fill space */
+}
+
+.nav-btn.primary {
+    background: var(--gradient-btn-light);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.nav-btn.primary:hover {
+    background: linear-gradient(135deg, var(--accent-blue-light), #004085);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.nav-btn.secondary {
+    background-color: transparent;
+    color: var(--primary-blue-light);
+    border: 2px solid var(--primary-blue-light);
+}
+
+.nav-btn.secondary:hover {
+    background-color: var(--selected-bg-light);
+    color: var(--primary-blue-light);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+}
+
+/* Progress Bar (Example) */
+.progress-bar-container {
+    width: 100%;
+    background-color: var(--border-light);
+    border-radius: 5px;
+    height: 10px;
+    margin-top: 1.5rem;
+    overflow: hidden; /* Ensures the bar inside stays within bounds */
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%; /* Will be controlled by JS */
+    background-color: var(--primary-blue-light);
+    border-radius: 5px;
+    transition: width 0.6s ease-in-out;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .quiz-container {
+        margin: 1.5rem 1rem;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .category-buttons {
+        grid-template-columns: 1fr; /* Stack buttons on small screens */
+        gap: 1rem;
+    }
+
+    .options-grid {
+        grid-template-columns: 1fr; /* Stack options on small screens */
+    }
+
+    .navigation-buttons {
+        flex-direction: column; /* Stack nav buttons */
+    }
+
+    .nav-btn {
+        width: 100%; /* Full width for stacked buttons */
+    }
+}
