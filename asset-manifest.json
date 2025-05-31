@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.5e360efb.css",
-    "main.js": "/static/js/main.d6781cac.js",
-    "index.html": "/index.html",
-    "main.5e360efb.css.map": "/static/css/main.5e360efb.css.map",
-    "main.d6781cac.js.map": "/static/js/main.d6781cac.js.map"
+    "main.css": "/Cricket-Quiz-PLatform/static/css/main.5e360efb.css",
+    "main.js": "/Cricket-Quiz-PLatform/static/js/main.d6781cac.js",
+    "index.html": "/Cricket-Quiz-PLatform/index.html",
+    "main.5e360efb.css.map": "/Cricket-Quiz-PLatform/static/css/main.5e360efb.css.map",
+    "main.d6781cac.js.map": "/Cricket-Quiz-PLatform/static/js/main.d6781cac.js.map"
   },
   "entrypoints": [
     "static/css/main.5e360efb.css",
